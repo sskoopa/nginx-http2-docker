@@ -1,0 +1,13 @@
+version: '3'
+services:
+  nginx:
+    build: ./build
+    container_name: nginx_http2_proxy
+    volumes:
+      - ./static:/data/www
+    ports:
+      - 8080:443
+    networks:
+      - front
+networks:
+  front:
