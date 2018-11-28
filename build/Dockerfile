@@ -6,6 +6,7 @@ FROM nginx:latest
 # docker rm -f tmp-nginx-container
 
 COPY nginx.conf /etc/nginx/nginx.conf
+COPY example.js /etc/nginx/example.js
 COPY certs /etc/nginx/certs
 
 VOLUME /data/www
