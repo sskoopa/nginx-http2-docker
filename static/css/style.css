@@ -1,0 +1,248 @@
+html, body {
+  display: flex;
+  flex-direction: column;
+  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-display: swap;
+  height: 100%;
+  min-width: 320px;
+}
+
+html, body, input, textarea, button {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+footer, header {
+  flex: none;
+}
+
+.header-logo {
+  height: 24px;
+}
+
+main {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+.menu-nav {
+  font-size: 24px;
+}
+
+#app {
+  padding: 0.5em;
+  width: 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--persimmon);
+}
+
+aside {
+  padding: 1em;
+}
+
+aside, nav {
+  border-radius: 3px;
+}
+
+main nav {
+  order: -1;
+}
+
+@media (max-width:767px) {
+  nav {
+    flex: 1;
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height 500ms ease;
+  }
+  #menu-nav-cbox:checked~nav {
+    max-height: 0.1px;
+    overflow: hidden;
+  }
+}
+
+#menu-nav-cbox {
+  display: none;
+}
+
+#smenu-nav-cbox:checked~nav {
+  display: none;
+}
+
+@media (min-width:768px) {
+  main {
+    flex-direction: row;
+  }
+  #app {
+    flex: 1;
+    padding: 0 2em;
+    margin: 0;
+  }
+  aside, nav {
+    flex: 0 0 12em;
+  }
+}
+
+main nav ul {
+  padding-left: 0;
+  padding-top: 0.5em;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+main nav li {
+  padding-top: 0.5em;
+}
+
+main nav ul ul ul {
+  padding-top: 0;
+}
+
+main nav li {
+  display: block;
+  font-size: 16px;
+}
+
+main nav li li {
+  border: none;
+  padding-bottom: 0.25em;
+  padding-left: 1.5em;
+  padding-top: 0.25em;
+}
+
+main nav li li.active {
+  border: none;
+}
+
+main nav .arrow {
+  float: right;
+  line-height: 1.42857;
+  padding-right: 0.5em;
+}
+
+.mi {
+  /*material icons <i class="mi">face</i>*/
+  font-family: 'Material Icons';
+  font-display: block;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.mi.md-18 {
+  font-size: 18px;
+}
+
+.mi.md-24 {
+  font-size: 24px;
+}
+
+.mi.md-36 {
+  font-size: 36px;
+}
+
+.mi.md-48 {
+  font-size: 48px;
+}
+
+/* Rules for using icons as black on a light background. */
+
+.mi.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.mi.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+/* Rules for using icons as white on a dark background. */
+
+.mi.md-light {
+  color: rgba(255, 255, 255, 1);
+}
+
+.mi.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.ripple {
+  /*button ripple effect from https://codeburst.io/create-a-material-design-ripple-effect-without-js-9d3cbee25b3e */
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.ripple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+}
+
+.ripple:active:after {
+  transform: scale(0, 0);
+  opacity: .3;
+  transition: 0s;
+}
+
+/* collapsible menu borrowed from: http://cssdeck.com/labs/pure-css3-expand-collapse */
+main nav ul input[type=checkbox] {
+  display: none;
+}
+
+main nav ul input[type=checkbox]~ul {
+  max-height: 0;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 500ms ease;
+}
+
+main nav ul input[type=checkbox]:checked~ul {
+  max-height: 100%;
+  max-width: 100%;
+  opacity: 1;
+}
+
+main nav ul input[type=checkbox]+label i {
+  transition: all 500ms ease;
+}
+
+main nav ul input[type=checkbox]:checked+label i {
+  transform: rotate(90deg);
+}
+
+i.far {
+  padding: 0.5em;
+  font-style: normal;
+}
+

@@ -1,0 +1,99 @@
+:root {
+  --persimmon-lighter: #ffac5d;
+  --persimmon-light: #ff9631;
+  --persimmon: #ee7400;
+  --persimmon-dark: #bd5c00;
+  --persimmon-darker: #944800;
+  --amanda-green-lighter: #cff044;
+  --amanda-green-light: #c0eb0c;
+  --amanda-green: #97bb00;
+  --amanda-green-dark: #7b9900;
+  --amanda-green-darker: #5a7000;
+  --almond-lighter: #ffffff;
+  --almond-light: #fffefd;
+  --almond: #f1edea;
+  --almond-dark: #c9c1bb;
+  --almond-darker: #a6998f;
+  --afternoon-bluesky-lighter: #527fc1;
+  --afternoon-bluesky-light: #3065b4;
+  --afternoon-bluesky: #0e4ead;
+  --afternoon-bluesky-dark: #0a3c85;
+  --afternoon-bluesky-darker: #062e69;
+  --apple-core-lighter: #fffaf3;
+  --apple-core-light: #fff2df;
+  --apple-core: #dcc7aa;
+  --apple-core-dark: #ba9f7a;
+  --apple-core-darker: #9b7c52;
+  --dandelion-lighter: #ffe17c;
+  --dandelion-light: #ffd752;
+  --dandelion: #ffce2b;
+  --dandelion-dark: #e0ad04;
+  --dandelion-darker: #af8700;
+  --scintillation-lighter: #f96f79;
+  --scintillation-light: #df424e;
+  --scintillation: #c91b28;
+  --scintillation-dark: #a30a16;
+  --scintillation-darker: #7c0009;
+  --slate-ligher: #73787c;
+  --slate-light: #555a5e;
+  --slate: #393d40;
+  --slate-dark: #151719;
+  --slate-darker: #10161b;
+  --slate-r: 57;
+  --slate-g: 61;
+  --slate-b: 64;
+  --modal-alpha: 0.7;
+  --modal-background: rgba(var(--slate-r), var(--slate-g), var(--slate-b), var(--modal-alpha));
+}
+
+html, body {
+  background-color: var(--almond);
+  color: var(--slate);
+}
+
+aside, nav {
+  background: hsla(31, 15%, 50%, .1)
+}
+
+main nav {
+  background-color: var(--slate);
+}
+
+main nav li {
+  border-left: 4px solid var(--slate);
+}
+
+main nav li.active {
+  border-left: 4px solid var(--persimmon-light);
+  background: var(--slate-light);
+}
+
+main nav li a, main nav li {
+  color: var(--persimmon);
+}
+
+main nav li.active a {
+  color: var(--persimmon-light);
+}
+
+main nav ul li ul li:hover {
+  background: var(--slate-light);
+}
+
+main nav a:hover {
+  color: var(--persimmon-light);
+}
+
+.mui-appbar {
+  background-color: var(--afternoon-bluesky);
+  color: var(--almond);
+}
+
+/*Ripple effects on buttons */
+.mui-btn--primary.ripple:after, .mui-btn--dark.ripple:after, .mui-btn--danger.ripple:after, .mui-btn--accent.ripple:after {
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+}
+
+.mui-btn--secondary.ripple:after, .mui-btn--light.ripple:after {
+  background-image: radial-gradient(circle, #666 10%, transparent 10.01%);
+}
