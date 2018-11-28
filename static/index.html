@@ -1,14 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sample Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-</head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Simple Material Site</title>
+  <meta name=viewport content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <link href="/css/mui.min.css" rel="stylesheet" type="text/css" />
+  <link href="/css/style.css" rel="stylesheet" type="text/css" />
+  <link href="/css/theme.css" rel="stylesheet" type="text/css" />
+  <link href="/css/fa/all.css" rel="stylesheet">
+ </head>
+
 <body>
-    <h1>Test HTML Page</h1>
+  <header>
+    <div class="mui-appbar mui--appbar-line-height">
+      <div class="mui-container-fluid">
+        <a href="#"><img class="header-logo" alt="logo" src="img/logo.svg" /></a>
+        <label class="menu-nav mui--pull-right mui--visible-xs-inline-block mui--visible-sm-inline-block" for='menu-nav-cbox'
+          aria-expanded='true' aria-controls='navbar' aria-label="Toggle Navigation">☰</label>
+      </div>
+    </div>
+  </header>
+  <main>
+    <input type='checkbox' id='menu-nav-cbox' checked />
+    <div id="app">
+      <p>Main content here...</p>
+      <p>Main content here...</p>
+      <p>Main content here...</p>
+      <p>Main content here...</p>
+      <button class="mui-btn mui-btn--primary ripple">Primary</button>
+      <button class="mui-btn mui-btn--secondary ripple">Secondary</button>
+      <button class="mui-btn mui-btn--dark ripple">Dark</button>
+      <button class="mui-btn mui-btn--danger ripple">Danger</button>
+      <button class="mui-btn mui-btn--accent ripple">Accent</button>
+      <button class="mui-btn mui-btn--light ripple">Light</button>
+    </div>
+    <nav>
+      <ul>
+        <li><input type="checkbox" id="cb1" /><label for="cb1"><i class="far fa-greater-than"></i></span>Category 1</label>
+          <ul>
+              <li><a href="#"><label for="menu-nav-cbox">Level 1-A</label></a></li>
+              <li><a href="#"><label for="menu-nav-cbox">Level 1-B</label></a></li>
+            </ul>
+        </li>
+        <li><input type="checkbox" id="cb2" /><label for="cb2"><i class="far fa-greater-than"></i>Category 2</label>
+          <ul>
+              <li><a href="#"><label for="menu-nav-cbox">Level 2-A</label></a></li>
+              <li><a href="#"><label for="menu-nav-cbox">Level 2-B</label></a></li>
+            </ul>
+        </li>
+        <li><input type="checkbox" id="cb3" /><label for="cb3"><i class="far fa-greater-than"></i>Category 3</label>
+          <ul>
+            <li><a href="#"><label for="menu-nav-cbox">Level 3-A</label></a></li>
+            <li><a href="#"><label for="menu-nav-cbox">Level 3-B</label></a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <aside>
+      <div>Ads</div>
+    </aside>
+  </main>
 </body>
+
 </html>
