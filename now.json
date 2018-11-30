@@ -1,6 +1,17 @@
 {
     "version": 2,
+    "public": true,
+    "alias": ["qnn.io"],
     "builds": [
-      { "src": "package.json", "use": "@now/static-build", "config": {"distDir": "static"} }
-    ]   
+      { "src": "package.json", "use": "@now/static-build", "config": {"distDir": "static"} },
+      { "src": "api/hello/index.js", "use": "@now/node"}
+    ],
+    "routes": [
+        { "src": "/home", "dest": "/index.html" },
+        { "src": "/", "dest": "/index.html" },
+        { "src": "/favicon.ico", "dest": "/favicon.ico" },
+        { "src": "/css/(.*)", "dest": "/css/$1" },
+        { "src": "/img/(.*)", "dest": "/img/$1" }
+        { "src": "/hello", "dest": "/api/hello" }
+    ]
 }
