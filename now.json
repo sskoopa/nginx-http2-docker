@@ -12,6 +12,6 @@
         { "src": "/favicon.ico", "dest": "/favicon.ico" },
         { "src": "/css/(.*)", "dest": "/css/$1" },
         { "src": "/img/(.*)", "dest": "/img/$1" }
-        { "src": "/hello", "dest": "/api/hello" }
+        { "src": "/hello", "dest": "api/hello" }
     ]
 }
